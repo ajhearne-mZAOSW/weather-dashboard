@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="container my-5">
+        <div class="row">
+            <div id="search" class="col-md-3 mt-3">
+                <div class="row justify-content-center">
+                    <form id="search-form" class="col pb-3">
+                        <label for="city-search">Search for a City:</label>
+                        <div class="col-12">
+                            <input id="city-search" class="form-control" name="city"></input>
+                            <button id="button-search" class="btn btn-primary col-12 my-2" type="submit">Search</button>
+                        </div>
+                    </form>
+                    <div id="search-history" class="col">
+                    <!-- list of prior searched cities -->
+                        <ul id="city-results" class="list-group"></ul>
+                    </div>
+                </div>
+            </div>
+            <div id="display-weather" class="col-md-9 pt-4">
+                <div id="current-weather" class="col"></div>
+                <div id="five-day-forecast" class="row mt-5 px-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+        crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script.js"></script>   
 </body>
 </html>
